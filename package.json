@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
-    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 1 --write 'src/**/*.{js,scss,css,json}'",
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/app.js",
     "watch": "node-sass -w src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,14 @@
     "url": "https://github.com/Le-Quynh-29/nodejs_blog/issues"
   },
   "homepage": "https://github.com/Le-Quynh-29/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,scss,css,json}": "prettier --single-quote --trailing-comma all --tab-width 1 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2"
