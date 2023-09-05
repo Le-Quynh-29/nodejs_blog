@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Le-Quynh-29/nodejs_blog#readme",
   "lint-staged": {
-    "src/**/*.{js,scss,css,json}": "prettier --single-quote --trailing-comma all --tab-width 1 --write"
+    "src/**/*.{js,scss,css,json}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
   },
   "husky": {
     "hooks": {
@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.1.2"
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^7.5.0"
   },
   "description": "",
   "devDependencies": {
