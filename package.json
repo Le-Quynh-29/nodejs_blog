@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
+    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 1 --write 'src/**/*.{js,scss,css,json}'",
     "start": "nodemon --inspect src/app.js",
     "watch": "node-sass -w src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,9 +30,12 @@
   },
   "description": "",
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
     "sass": "^1.66.1"
   }
 }
